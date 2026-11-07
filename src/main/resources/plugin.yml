@@ -13,9 +13,9 @@ main: me.matl114.logitech.MyAddon
 ## 你可以更改为你的项目仓库地址，或者你的个人网站。你也可以移除此项目。
 website: https://github.com/m1919810/LogiTech
 
-## 该值将在构建时被自动替换为pom.xml中定义的版本。
+## 该值将在构建时被自动替换为 gradle.properties 中定义的版本。
 ## 不要更改此项目。
-version: ${project.version}
+version: ${version}
 
 ## 这是运行该附属所需的最低MC版本。
 api-version: '1.20'

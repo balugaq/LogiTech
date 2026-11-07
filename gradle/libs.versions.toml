@@ -1,0 +1,50 @@
+# Gradle Version Catalog
+# 依赖集中管理：build.gradle.kts 里用 `libs.xxx` 引用。
+# alias 一律 kebab-case，Kotlin DSL 访问时自动转驼峰（如 `paper-api` → `libs.paper.api`）。
+
+[versions]
+# Core
+paper-api = "1.20.4-R0.1-SNAPSHOT"
+slimefun4 = "2025.1"
+
+# Tools etc. (会被 shade 进产物)
+more-persistent-data-types = "2.4.0"
+matlib = "344aa5f"
+lombok = "1.18.46"
+
+# Supported Plugins
+infinity-expansion = "bebf0bd0f9"
+networks = "1514bf728b"
+wild-stacker-api = "2023.2"
+rosestacker = "1.5.23"
+guizhan-lib-plugin = "1.7.6"
+
+# Test（原 pom.xml 中的 5.7.2，保持不变）
+junit = "5.7.2"
+
+# Plugins
+shadow = "9.6.1"
+
+[libraries]
+# Core
+paper-api = { module = "io.papermc.paper:paper-api", version.ref = "paper-api" }
+slimefun4 = { module = "com.github.SlimefunGuguProject:Slimefun4", version.ref = "slimefun4" }
+guizhan-lib-plugin = { module = "net.guizhanss:GuizhanLibPlugin", version.ref = "guizhan-lib-plugin" }
+
+# Tools etc.
+more-persistent-data-types = { module = "com.jeff-media:MorePersistentDataTypes", version.ref = "more-persistent-data-types" }
+matlib-all = { module = "com.github.m1919810.matlib:matlib-all", version.ref = "matlib" }
+matlib-slimefun = { module = "com.github.m1919810.matlib:matlib-slimefun", version.ref = "matlib" }
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+
+# Supported Plugins
+infinity-expansion = { module = "com.github.SlimefunGuguProject:InfinityExpansion", version.ref = "infinity-expansion" }
+networks = { module = "com.github.SlimefunGuguProject:Networks", version.ref = "networks" }
+wild-stacker-api = { module = "com.bgsoftware:WildStackerAPI", version.ref = "wild-stacker-api" }
+rosestacker = { module = "dev.rosewood:rosestacker", version.ref = "rosestacker" }
+
+# Test
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
+
+[plugins]
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }

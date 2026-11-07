@@ -19,3 +19,11 @@ list*.md
 dependency-reduced-pom.xml
 /.git-versioned-pom.xml
 
+
+.workbuddy/
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!lib/*.jar
+run/
+server/
